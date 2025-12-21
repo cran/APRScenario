@@ -650,7 +650,7 @@ cost.</p>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">sign_irf =</span> sr[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># estimate the model</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>posterior      <span class="ot">=</span> <span class="fu">estimate</span>(specification, <span class="at">S =</span> n_draws) <span class="co"># SEE FORKED VERSION FOR PARALLEL Q ROTATION DRAWS</span></span></code></pre></div>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>posterior      <span class="ot">=</span> bsvars<span class="sc">::</span><span class="fu">estimate</span>(specification, <span class="at">S =</span> n_draws) <span class="co"># SEE FORKED VERSION FOR PARALLEL Q ROTATION DRAWS</span></span></code></pre></div>
 <pre><code>## **************************************************|
 ##  bsvarSIGNs: Bayesian Structural VAR with sign,   |
 ##              zero and narrative restrictions      |
