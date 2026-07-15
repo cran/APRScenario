@@ -29,27 +29,27 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -63,55 +63,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -609,48 +608,48 @@ draws; iii) Several Q draws per posterior, but only one retained. The
 ii) and iii) option exploit the fact that in multi-core computer the
 cost of multiple draws of Q (as many as cores/threads) has minimal extra
 cost.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(APRScenario)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bsvarSIGNs)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bsvars)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggfortify)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: During package development, you can reload the package if needed</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(NKdata)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>X0<span class="ot">&lt;-</span>NKdata[,<span class="sc">-</span><span class="dv">1</span>] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>varbls<span class="ot">&lt;-</span><span class="fu">names</span>(X0)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">autoplot</span>(X0 <span class="sc">%&gt;%</span> <span class="fu">ts</span>(.,<span class="at">frequency=</span><span class="dv">4</span>,<span class="at">start=</span><span class="fu">round</span>(NKdata<span class="sc">$</span>year[<span class="dv">1</span>])),<span class="at">facets=</span>T)<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># To save the plot, use:</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(&#39;data.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sr <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow =</span> <span class="fu">length</span>(varbls), <span class="at">ncol =</span> <span class="fu">length</span>(varbls))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill the matrix with sign restrictions as per the previous setup</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sr <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="co"># GDP</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>, <span class="co"># infl</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>,<span class="cn">NA</span>,<span class="dv">1</span> <span class="co"># interest rate</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ############# Subset of variables</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Baseline VAR --------</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>subset_<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="co"># start with subsets of variables</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#/////////////////////////////</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>n_draws<span class="ot">=</span><span class="dv">200</span> <span class="co"># increase for final estimation</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>p<span class="ot">=</span><span class="dv">4</span> <span class="co"># lags</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># possible subsampling</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>X<span class="ot">=</span>X0[<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(X0)<span class="sc">-</span><span class="dv">4</span>),]</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># specify the model</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>specification  <span class="ot">=</span> bsvarSIGNs<span class="sc">::</span>specify_bsvarSIGN<span class="sc">$</span><span class="fu">new</span>(<span class="at">data=</span><span class="fu">as.matrix</span>(X,<span class="dv">3</span>,<span class="dv">3</span>),</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">p        =</span> p,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">sign_irf =</span> sr[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># estimate the model</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>posterior      <span class="ot">=</span> bsvars<span class="sc">::</span><span class="fu">estimate</span>(specification, <span class="at">S =</span> n_draws) <span class="co"># SEE FORKED VERSION FOR PARALLEL Q ROTATION DRAWS</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Load required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(APRScenario)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(bsvarSIGNs)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">library</span>(bsvars)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="fu">library</span>(ggfortify)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co"># Note: During package development, you can reload the package if needed</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">data</span>(NKdata)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>X0<span class="ot">&lt;-</span>NKdata[,<span class="sc">-</span><span class="dv">1</span>] <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>varbls<span class="ot">&lt;-</span><span class="fu">names</span>(X0)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">autoplot</span>(X0 <span class="sc">%&gt;%</span> <span class="fu">ts</span>(.,<span class="at">frequency=</span><span class="dv">4</span>,<span class="at">start=</span><span class="fu">round</span>(NKdata<span class="sc">$</span>year[<span class="dv">1</span>])),<span class="at">facets=</span>T)<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># To save the plot, use:</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co"># ggsave(&#39;data.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>sr <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="cn">NA</span>, <span class="at">nrow =</span> <span class="fu">length</span>(varbls), <span class="at">ncol =</span> <span class="fu">length</span>(varbls))</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co"># Fill the matrix with sign restrictions as per the previous setup</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>sr <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="co"># GDP</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="dv">1</span>,<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>, <span class="co"># infl</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="dv">1</span>,<span class="cn">NA</span>,<span class="dv">1</span> <span class="co"># interest rate</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># ############# Subset of variables</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co"># 1. Baseline VAR --------</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>subset_<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="co"># start with subsets of variables</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#/////////////////////////////</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>n_draws<span class="ot">=</span><span class="dv">200</span> <span class="co"># increase for final estimation</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>p<span class="ot">=</span><span class="dv">4</span> <span class="co"># lags</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># possible subsampling</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>X<span class="ot">=</span>X0[<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nrow</span>(X0)<span class="sc">-</span><span class="dv">4</span>),]</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co"># specify the model</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>specification  <span class="ot">=</span> bsvarSIGNs<span class="sc">::</span>specify_bsvarSIGN<span class="sc">$</span><span class="fu">new</span>(<span class="at">data=</span><span class="fu">as.matrix</span>(X,<span class="dv">3</span>,<span class="dv">3</span>),</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>                                      <span class="at">p        =</span> p,</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>                                       <span class="at">sign_irf =</span> sr[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co"># estimate the model</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>posterior      <span class="ot">=</span> bsvars<span class="sc">::</span><span class="fu">estimate</span>(specification, <span class="at">S =</span> n_draws) <span class="co"># SEE FORKED VERSION FOR PARALLEL Q ROTATION DRAWS</span></span></code></pre></div>
 <pre><code>## **************************************************|
 ##  bsvarSIGNs: Bayesian Structural VAR with sign,   |
 ##              zero and narrative restrictions      |
@@ -658,261 +657,261 @@ cost.</p>
 ##  Progress of simulation for 200 independent draws
 ##  Press Esc to interrupt the computations
 ## **************************************************|</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># compute and plot impulse responses</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>irf            <span class="ot">=</span> bsvars<span class="sc">::</span><span class="fu">compute_impulse_responses</span>(posterior, <span class="at">horizon =</span> <span class="dv">40</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># {</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   X11()</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(irf, probability = 0.68)</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  p<span class="ot">&lt;-</span><span class="fu">plot_bvars</span>(irf, <span class="at">significance_level =</span> <span class="fl">0.32</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">central_tendency =</span> <span class="st">&#39;median&#39;</span>, <span class="at">variable_names =</span> varbls, <span class="at">shock_names =</span> varbls)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  {<span class="fu">dev.new</span>()</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  grid<span class="sc">::</span><span class="fu">grid.newpage</span>()  </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  grid_arranged_plots <span class="ot">&lt;-</span> <span class="fu">arrangeGrob</span>(<span class="at">grobs =</span> p[<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">nrow =</span><span class="dv">3</span>, <span class="at">ncol =</span><span class="dv">3</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grid.arrange</span>(<span class="at">grobs =</span> p[<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">nrow =</span><span class="dv">3</span>, <span class="at">ncol =</span><span class="dv">3</span>)</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># To save the IRF plots:</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(&#39;irf_bvars.png&#39;, plot=grid_arranged_plots, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>sr1<span class="ot">&lt;-</span>sr <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(sr1)<span class="ot">&lt;-</span>varbls </span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(sr1)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># To display the sign restrictions table:</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co"># knitr::kable(sr1, row.names = TRUE, caption = &#39;Sign Restrictions: IRF 1 (shocks in col.)&#39;)</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># sr1 %&gt;% cat(file=&#39;figures/sr_bvars.tex&#39;)</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>f_bvar<span class="ot">&lt;-</span>bsvars<span class="sc">::</span><span class="fu">forecast</span>(</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  posterior,</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">horizon =</span> <span class="dv">3</span>,</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">exogenous_forecast =</span> <span class="cn">NULL</span>,</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">conditional_forecast =</span> <span class="cn">NULL</span></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co"># VAR structure Y&#39;=X&#39;*B+u&#39; (see specification$data_matrices) </span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># compute and plot impulse responses</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>irf            <span class="ot">=</span> bsvars<span class="sc">::</span><span class="fu">compute_impulse_responses</span>(posterior, <span class="at">horizon =</span> <span class="dv">40</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="co"># {</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co">#   X11()</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co"># plot(irf, probability = 0.68)</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="co"># }</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>{</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  p<span class="ot">&lt;-</span><span class="fu">plot_bvars</span>(irf, <span class="at">significance_level =</span> <span class="fl">0.32</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>                <span class="at">central_tendency =</span> <span class="st">&#39;median&#39;</span>, <span class="at">variable_names =</span> varbls, <span class="at">shock_names =</span> varbls)</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  {<span class="fu">dev.new</span>()</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  grid<span class="sc">::</span><span class="fu">grid.newpage</span>()  </span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  grid_arranged_plots <span class="ot">&lt;-</span> <span class="fu">arrangeGrob</span>(<span class="at">grobs =</span> p[<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">nrow =</span><span class="dv">3</span>, <span class="at">ncol =</span><span class="dv">3</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>  <span class="fu">grid.arrange</span>(<span class="at">grobs =</span> p[<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">nrow =</span><span class="dv">3</span>, <span class="at">ncol =</span><span class="dv">3</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>  }</span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>  }</span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a><span class="co"># To save the IRF plots:</span></span>
+<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a><span class="co"># ggsave(&#39;irf_bvars.png&#39;, plot=grid_arranged_plots, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span>
+<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a>sr1<span class="ot">&lt;-</span>sr <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a><span class="fu">rownames</span>(sr1)<span class="ot">&lt;-</span>varbls </span>
+<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="fu">names</span>(sr1)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a><span class="co"># To display the sign restrictions table:</span></span>
+<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a><span class="co"># knitr::kable(sr1, row.names = TRUE, caption = &#39;Sign Restrictions: IRF 1 (shocks in col.)&#39;)</span></span>
+<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a><span class="co"># sr1 %&gt;% cat(file=&#39;figures/sr_bvars.tex&#39;)</span></span>
+<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a>f_bvar<span class="ot">&lt;-</span>bsvars<span class="sc">::</span><span class="fu">forecast</span>(</span>
+<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a>  posterior,</span>
+<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a>  <span class="at">horizon =</span> <span class="dv">3</span>,</span>
+<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a>  <span class="at">exogenous_forecast =</span> <span class="cn">NULL</span>,</span>
+<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a>  <span class="at">conditional_forecast =</span> <span class="cn">NULL</span></span>
+<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a>)</span>
+<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a><span class="co"># VAR structure Y&#39;=X&#39;*B+u&#39; (see specification$data_matrices) </span></span></code></pre></div>
 <div id="getting-all-the-necessary-matrices" class="section level2">
 <h2>Getting all the necessary matrices</h2>
 <p>bsvarSIGNs generate a set of matrices that are needed for the
 computation of the scenarios. The function
 gen_mats(posterior,specification) generate the necessary matrices for
 the scenarios.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Actual function ---------------</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>matrices<span class="ot">&lt;-</span><span class="fu">gen_mats</span>(posterior, specification);</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Unpack the matrices from the returned list</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>M_inv <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M_inv</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>M_list <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M_list</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> matrices<span class="sc">$</span>B</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>B_list <span class="ot">&lt;-</span> matrices<span class="sc">$</span>B_list</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>intercept <span class="ot">&lt;-</span> matrices<span class="sc">$</span>intercept</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>n_var <span class="ot">&lt;-</span> matrices<span class="sc">$</span>n_var</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>n_p <span class="ot">&lt;-</span> matrices<span class="sc">$</span>n_p</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> matrices<span class="sc">$</span>Y</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>XX <span class="ot">&lt;-</span> matrices<span class="sc">$</span>X</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">&lt;-</span> matrices<span class="sc">$</span>Z</span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{<span class="co"># run all block </span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>h<span class="ot">=</span><span class="dv">4</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>y_h_all<span class="ot">&lt;-</span><span class="fu">forc_h</span>(h,<span class="at">n_sim=</span><span class="dv">200</span>,<span class="at">data_=</span>Z,<span class="at">posterior=</span>posterior,<span class="at">matrices=</span>matrices)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>y_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">1</span>]]</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>hist_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">3</span>]]</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>b_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">4</span>]]</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>{<span class="co"># extract quantiles</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.5</span>))</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>hist_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(hist_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>hist_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(hist_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to data frame for better manipulation</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_m))</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_u))</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_l))</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>hist_h_u<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(hist_h_u))</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>hist_h_l<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(hist_h_l))</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(y_h_m)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>y_h_m<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_m)</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(y_h_m,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;Median&#39;</span>)</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(y_h_l)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>y_h_l<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_l)</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(y_h_l,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;LB&#39;</span>),</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>                   <span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(y_h_u)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>y_h_u<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_u)</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(y_h_u,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;UB&#39;</span>),</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(hist_h_l)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>hist_h_l<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(hist_h_l)</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>hist_h_tot<span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(hist_h_l,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;LB_s&#39;</span>)</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(hist_h_u)<span class="ot">&lt;-</span>varbls</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>hist_h_u<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(hist_h_u)</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>hist_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(hist_h_tot,</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(hist_h_u,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;UB_s&#39;</span>),</span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,hist_h_tot,<span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect result</span></span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>dt_t<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(Y))</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>dt_t<span class="sc">$</span>h<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dt_t)</span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(dt_t,<span class="at">cols =</span><span class="fu">all_of</span>(<span class="dv">1</span><span class="sc">:</span>n_var),<span class="at">values_to =</span><span class="fu">names</span>(y_h_tot)[<span class="dv">3</span>],<span class="at">names_to =</span> <span class="st">&quot;vars&quot;</span> )</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[y_data<span class="sc">$</span>h<span class="sc">&gt;=</span><span class="fu">last</span>(y_data<span class="sc">$</span>h)<span class="sc">-</span><span class="dv">4</span>,]  </span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>h<span class="ot">&lt;-</span>y_data<span class="sc">$</span>h<span class="sc">-</span><span class="fu">max</span>(y_data<span class="sc">$</span>h)</span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>LB<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>UB<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>LB_s<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>UB_s<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">rbind</span>(y_data,y_h_tot)</span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span>y_h_tot[<span class="fu">order</span>(y_h_tot<span class="sc">$</span>h),]</span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(y_h_tot)</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>uncond.forc<span class="ot">&lt;-</span>y_h_tot</span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(uncond.forc[uncond.forc<span class="sc">$</span>vars <span class="sc">==</span> varbls[<span class="dv">1</span>], ], <span class="fu">aes</span>(<span class="at">x =</span> h)) <span class="sc">+</span></span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Median line (solid line)</span></span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Median, <span class="at">color =</span> <span class="st">&quot;med&quot;</span>), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Shaded area for 68% HDI</span></span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> LB, <span class="at">ymax =</span> UB, <span class="at">fill =</span> <span class="st">&quot;bnd&quot;</span>), </span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Dashed lines for 68% high credibility band of history</span></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> LB_s, <span class="at">color =</span> <span class="st">&quot;hist&quot;</span>), </span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> UB_s, <span class="at">color =</span> <span class="st">&quot;hist&quot;</span>), </span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Labels and theme</span></span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Unconditional Forecast&quot;</span>, <span class="at">x =</span> <span class="st">&quot;h&quot;</span>, <span class="at">y =</span> varbls[<span class="dv">1</span>]) <span class="sc">+</span></span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Custom legend for colors</span></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">&quot;Legend&quot;</span>,</span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&#39;med&#39;</span><span class="ot">=</span><span class="st">&quot;Median&quot;</span>,<span class="st">&#39;hist&#39;</span><span class="ot">=</span><span class="st">&quot;no shock unc.&quot;</span>),</span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;med&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>,  <span class="st">&#39;hist&#39;</span><span class="ot">=</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>  <span class="co"># # Custom legend for fill</span></span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>  <span class="co"># scale_fill_manual(</span></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>  <span class="co">#   name = &quot;Legend&quot;,</span></span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>  <span class="co">#   labels=c(&#39;bnd&#39;=&quot;no shock unc.&quot;),</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>  <span class="co">#   values = c(&#39;bnd&#39; = &quot;lightblue&quot;)</span></span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>  <span class="co"># )+</span></span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;bottom&#39;</span>)<span class="sc">+</span></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>} <span class="co"># end run all block</span></span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To save the unconditional forecast plot:</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(&#39;uncond_forc.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NB: Y contans the data n_var x T</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>h<span class="ot">=</span><span class="dv">4</span> <span class="co"># horizon</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>n_sim<span class="ot">=</span><span class="dv">200</span> <span class="co"># number of shock draws</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>obs<span class="ot">=</span><span class="fu">c</span>(<span class="dv">2</span>) <span class="co">#position of observables</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>pos_cond_vars<span class="ot">=</span>obs </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># given the path of the observables</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>TT<span class="ot">=</span><span class="fu">nrow</span>(X0)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>path<span class="ot">=</span>X0[(TT<span class="sc">-</span>h<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>TT,obs]</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># used for bult in conditional forecast</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>bvarSign_path<span class="ot">=</span>X0[(TT<span class="sc">-</span>h<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>TT,]</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>bvarSign_path[,<span class="sc">-</span>obs]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># give the shocks that are not driving the scenario: NA if all driving</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>shocks<span class="ot">=</span>NA<span class="co">#c(1,2,3)</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>tmp<span class="ot">&lt;-</span><span class="fu">scenarios</span>(<span class="at">h =</span> h,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">path =</span> path,<span class="at">obs =</span> obs,</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">free_shocks =</span> shocks,</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>               <span class="at">n_sample =</span> <span class="cn">NULL</span>,</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>               <span class="at">data_ =</span> Z,<span class="at">g=</span><span class="cn">NULL</span>,<span class="at">Sigma_g=</span><span class="cn">NULL</span>,</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>               <span class="at">posterior=</span>posterior,<span class="at">matrices=</span>matrices)</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>mu_eps<span class="ot">&lt;-</span>tmp[[<span class="dv">1</span>]]</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>Sigma_eps<span class="ot">&lt;-</span>tmp[[<span class="dv">2</span>]]</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>mu_y<span class="ot">&lt;-</span>tmp[[<span class="dv">3</span>]]</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>Sigma_y<span class="ot">&lt;-</span>tmp[[<span class="dv">4</span>]]</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>big_b<span class="ot">&lt;-</span>tmp[[<span class="dv">5</span>]]</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>big_M<span class="ot">&lt;-</span>tmp[[<span class="dv">6</span>]]</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>y_h<span class="ot">&lt;-</span><span class="fu">simulate_conditional_forecasts</span>(<span class="at">mu_y=</span>mu_y, <span class="at">Sigma_y=</span>Sigma_y, <span class="at">varnames =</span> varbls, <span class="at">n_sim =</span> n_sim)</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co"># convert to data frames of central and HPD</span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.5</span>))</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">center=</span>y_h_m,<span class="at">variable=</span><span class="fu">rep</span>(varbls,h),<span class="at">hor=</span><span class="fu">sort</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>h,n_var)))</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>cond.for<span class="sc">$</span>lower<span class="ot">&lt;-</span>y_h_l</span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>cond.for<span class="sc">$</span>upper<span class="ot">&lt;-</span>y_h_u</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span>cond.for[,<span class="fu">c</span>(<span class="st">&quot;hor&quot;</span>,<span class="st">&quot;variable&quot;</span>,<span class="st">&quot;lower&quot;</span>,<span class="st">&quot;center&quot;</span>,<span class="st">&quot;upper&quot;</span>)]</span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="co"># inspect result</span></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>dt_t<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(Y))</span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>dt_t<span class="sc">$</span>h<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dt_t)</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(dt_t,<span class="at">cols =</span><span class="fu">all_of</span>(<span class="dv">1</span><span class="sc">:</span>n_var),<span class="at">values_to =</span><span class="fu">names</span>(cond.for)[<span class="dv">4</span>],<span class="at">names_to =</span> <span class="st">&quot;variable&quot;</span> )</span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[y_data<span class="sc">$</span>h<span class="sc">&gt;=</span><span class="fu">last</span>(y_data<span class="sc">$</span>h)<span class="sc">-</span><span class="dv">4</span>,]  </span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>hor<span class="ot">&lt;-</span>y_data<span class="sc">$</span>h<span class="sc">-</span><span class="fu">max</span>(y_data<span class="sc">$</span>h)</span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>lower<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>upper<span class="ot">&lt;-</span><span class="cn">NA</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[,<span class="fu">names</span>(cond.for)]</span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span><span class="fu">rbind</span>(y_data,cond.for)</span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span>cond.for[<span class="fu">order</span>(cond.for<span class="sc">$</span>hor),]</span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>cond.for<span class="sc">$</span>hist<span class="ot">&lt;-</span><span class="dv">1</span></span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>cond.for[cond.for<span class="sc">$</span>hor<span class="sc">&lt;=</span><span class="dv">0</span>,<span class="st">&#39;hist&#39;</span>]<span class="ot">&lt;-</span><span class="dv">0</span></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>T.start<span class="ot">=</span><span class="st">&#39;2016-01-01&#39;</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>T.end<span class="ot">=</span><span class="fu">as.Date</span>(T.start)<span class="sc">%m+%</span><span class="fu">months</span>(<span class="dv">9</span>)</span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">t</span>(Y) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>dt_tmp<span class="ot">&lt;-</span>zoo<span class="sc">::</span><span class="fu">as.yearqtr</span>(NKdata<span class="sc">$</span>year, <span class="at">format =</span> <span class="st">&quot;%Y Q%q&quot;</span>)</span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>dates_date<span class="ot">&lt;-</span>zoo<span class="sc">::</span><span class="fu">as.Date</span>(dt_tmp)</span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>y_data<span class="sc">$</span>hor<span class="ot">&lt;-</span>dates_date[(<span class="dv">2</span><span class="sc">*</span>specification<span class="sc">$</span>p<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span><span class="fu">length</span>(dates_date)]</span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">plot_cond_forc</span>(<span class="at">y_h_cond =</span>y_h, varbls[<span class="dv">1</span>],<span class="at">T.start =</span> T.start,<span class="at">T.end =</span> T.end,<span class="at">y_data =</span>y_data )</span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>p[[<span class="dv">1</span>]]</span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To save the conditional forecast plot:</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(&#39;cond_forc.png&#39;, plot=p[[1]], device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>threshold<span class="ot">=</span><span class="fu">last</span>(y_data[,<span class="dv">1</span>])<span class="sc">*</span>(<span class="fl">1.01</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">plot_cond_histo</span>(<span class="at">variable=</span>varbls[<span class="dv">1</span>],<span class="at">horizon=</span><span class="dv">1</span>,</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                   <span class="at">threshold =</span> threshold,<span class="at">data =</span>y_h,<span class="at">above=</span>F,<span class="at">size=</span><span class="dv">5</span>)<span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title=</span><span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To save the conditional histogram plot:</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave(&#39;cond_histo.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>q<span class="ot">&lt;-</span><span class="fu">KL</span>(Sigma_eps,mu_eps,h,<span class="at">plot_ =</span> T)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(q[[<span class="dv">1</span>]],<span class="at">main=</span><span class="st">&#39;KL measure (ref value 0.5)&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># Actual function ---------------</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>matrices<span class="ot">&lt;-</span><span class="fu">gen_mats</span>(posterior, specification);</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co"># Unpack the matrices from the returned list</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>M <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>M_inv <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M_inv</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>M_list <span class="ot">&lt;-</span> matrices<span class="sc">$</span>M_list</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>B <span class="ot">&lt;-</span> matrices<span class="sc">$</span>B</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>B_list <span class="ot">&lt;-</span> matrices<span class="sc">$</span>B_list</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>intercept <span class="ot">&lt;-</span> matrices<span class="sc">$</span>intercept</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>n_var <span class="ot">&lt;-</span> matrices<span class="sc">$</span>n_var</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>n_p <span class="ot">&lt;-</span> matrices<span class="sc">$</span>n_p</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>Y <span class="ot">&lt;-</span> matrices<span class="sc">$</span>Y</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>XX <span class="ot">&lt;-</span> matrices<span class="sc">$</span>X</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>Z <span class="ot">&lt;-</span> matrices<span class="sc">$</span>Z</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>{<span class="co"># run all block </span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>h<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>y_h_all<span class="ot">&lt;-</span><span class="fu">forc_h</span>(h,<span class="at">n_sim=</span><span class="dv">200</span>,<span class="at">data_=</span>Z,<span class="at">posterior=</span>posterior,<span class="at">matrices=</span>matrices)</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>y_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">1</span>]]</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>hist_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">3</span>]]</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>b_h<span class="ot">&lt;-</span>y_h_all[[<span class="dv">4</span>]]</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>{<span class="co"># extract quantiles</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.5</span>))</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>hist_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(hist_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>hist_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(hist_h,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>}</span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="co"># convert to data frame for better manipulation</span></span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a>{</span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_m))</span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_u))</span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(y_h_l))</span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a>hist_h_u<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(hist_h_u))</span>
+<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a>hist_h_l<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(hist_h_l))</span>
+<span id="cb8-25"><a href="#cb8-25" tabindex="-1"></a></span>
+<span id="cb8-26"><a href="#cb8-26" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" tabindex="-1"></a><span class="fu">names</span>(y_h_m)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a>y_h_m<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_m)</span>
+<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(y_h_m,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;Median&#39;</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" tabindex="-1"></a><span class="fu">names</span>(y_h_l)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb8-31"><a href="#cb8-31" tabindex="-1"></a>y_h_l<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_l)</span>
+<span id="cb8-32"><a href="#cb8-32" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,</span>
+<span id="cb8-33"><a href="#cb8-33" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(y_h_l,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;LB&#39;</span>),</span>
+<span id="cb8-34"><a href="#cb8-34" tabindex="-1"></a>                   <span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
+<span id="cb8-35"><a href="#cb8-35" tabindex="-1"></a></span>
+<span id="cb8-36"><a href="#cb8-36" tabindex="-1"></a><span class="fu">names</span>(y_h_u)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb8-37"><a href="#cb8-37" tabindex="-1"></a>y_h_u<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(y_h_u)</span>
+<span id="cb8-38"><a href="#cb8-38" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,</span>
+<span id="cb8-39"><a href="#cb8-39" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(y_h_u,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;UB&#39;</span>),</span>
+<span id="cb8-40"><a href="#cb8-40" tabindex="-1"></a><span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
+<span id="cb8-41"><a href="#cb8-41" tabindex="-1"></a></span>
+<span id="cb8-42"><a href="#cb8-42" tabindex="-1"></a><span class="fu">names</span>(hist_h_l)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb8-43"><a href="#cb8-43" tabindex="-1"></a>hist_h_l<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(hist_h_l)</span>
+<span id="cb8-44"><a href="#cb8-44" tabindex="-1"></a>hist_h_tot<span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(hist_h_l,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;LB_s&#39;</span>)</span>
+<span id="cb8-45"><a href="#cb8-45" tabindex="-1"></a></span>
+<span id="cb8-46"><a href="#cb8-46" tabindex="-1"></a><span class="fu">names</span>(hist_h_u)<span class="ot">&lt;-</span>varbls</span>
+<span id="cb8-47"><a href="#cb8-47" tabindex="-1"></a>hist_h_u<span class="sc">$</span>h<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(hist_h_u)</span>
+<span id="cb8-48"><a href="#cb8-48" tabindex="-1"></a>hist_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(hist_h_tot,</span>
+<span id="cb8-49"><a href="#cb8-49" tabindex="-1"></a>                   <span class="fu">pivot_longer</span>(hist_h_u,<span class="at">cols=</span><span class="fu">all_of</span>(varbls),<span class="at">names_to=</span><span class="st">&#39;vars&#39;</span>,<span class="at">values_to=</span><span class="st">&#39;UB_s&#39;</span>),</span>
+<span id="cb8-50"><a href="#cb8-50" tabindex="-1"></a><span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
+<span id="cb8-51"><a href="#cb8-51" tabindex="-1"></a></span>
+<span id="cb8-52"><a href="#cb8-52" tabindex="-1"></a></span>
+<span id="cb8-53"><a href="#cb8-53" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">left_join</span>(y_h_tot,hist_h_tot,<span class="at">by=</span><span class="fu">c</span>(<span class="st">&#39;h&#39;</span>,<span class="st">&#39;vars&#39;</span>))</span>
+<span id="cb8-54"><a href="#cb8-54" tabindex="-1"></a></span>
+<span id="cb8-55"><a href="#cb8-55" tabindex="-1"></a>}</span>
+<span id="cb8-56"><a href="#cb8-56" tabindex="-1"></a><span class="co"># inspect result</span></span>
+<span id="cb8-57"><a href="#cb8-57" tabindex="-1"></a>dt_t<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(Y))</span>
+<span id="cb8-58"><a href="#cb8-58" tabindex="-1"></a>dt_t<span class="sc">$</span>h<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dt_t)</span>
+<span id="cb8-59"><a href="#cb8-59" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(dt_t,<span class="at">cols =</span><span class="fu">all_of</span>(<span class="dv">1</span><span class="sc">:</span>n_var),<span class="at">values_to =</span><span class="fu">names</span>(y_h_tot)[<span class="dv">3</span>],<span class="at">names_to =</span> <span class="st">&quot;vars&quot;</span> )</span>
+<span id="cb8-60"><a href="#cb8-60" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[y_data<span class="sc">$</span>h<span class="sc">&gt;=</span><span class="fu">last</span>(y_data<span class="sc">$</span>h)<span class="sc">-</span><span class="dv">4</span>,]  </span>
+<span id="cb8-61"><a href="#cb8-61" tabindex="-1"></a>  </span>
+<span id="cb8-62"><a href="#cb8-62" tabindex="-1"></a>y_data<span class="sc">$</span>h<span class="ot">&lt;-</span>y_data<span class="sc">$</span>h<span class="sc">-</span><span class="fu">max</span>(y_data<span class="sc">$</span>h)</span>
+<span id="cb8-63"><a href="#cb8-63" tabindex="-1"></a>y_data<span class="sc">$</span>LB<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb8-64"><a href="#cb8-64" tabindex="-1"></a>y_data<span class="sc">$</span>UB<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb8-65"><a href="#cb8-65" tabindex="-1"></a>y_data<span class="sc">$</span>LB_s<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb8-66"><a href="#cb8-66" tabindex="-1"></a>y_data<span class="sc">$</span>UB_s<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb8-67"><a href="#cb8-67" tabindex="-1"></a></span>
+<span id="cb8-68"><a href="#cb8-68" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span><span class="fu">rbind</span>(y_data,y_h_tot)</span>
+<span id="cb8-69"><a href="#cb8-69" tabindex="-1"></a>y_h_tot<span class="ot">&lt;-</span>y_h_tot[<span class="fu">order</span>(y_h_tot<span class="sc">$</span>h),]</span>
+<span id="cb8-70"><a href="#cb8-70" tabindex="-1"></a><span class="fu">head</span>(y_h_tot)</span>
+<span id="cb8-71"><a href="#cb8-71" tabindex="-1"></a></span>
+<span id="cb8-72"><a href="#cb8-72" tabindex="-1"></a>uncond.forc<span class="ot">&lt;-</span>y_h_tot</span>
+<span id="cb8-73"><a href="#cb8-73" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb8-74"><a href="#cb8-74" tabindex="-1"></a></span>
+<span id="cb8-75"><a href="#cb8-75" tabindex="-1"></a></span>
+<span id="cb8-76"><a href="#cb8-76" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(uncond.forc[uncond.forc<span class="sc">$</span>vars <span class="sc">==</span> varbls[<span class="dv">1</span>], ], <span class="fu">aes</span>(<span class="at">x =</span> h)) <span class="sc">+</span></span>
+<span id="cb8-77"><a href="#cb8-77" tabindex="-1"></a>  <span class="co"># Median line (solid line)</span></span>
+<span id="cb8-78"><a href="#cb8-78" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Median, <span class="at">color =</span> <span class="st">&quot;med&quot;</span>), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb8-79"><a href="#cb8-79" tabindex="-1"></a>  </span>
+<span id="cb8-80"><a href="#cb8-80" tabindex="-1"></a>  <span class="co"># Shaded area for 68% HDI</span></span>
+<span id="cb8-81"><a href="#cb8-81" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> LB, <span class="at">ymax =</span> UB, <span class="at">fill =</span> <span class="st">&quot;bnd&quot;</span>), </span>
+<span id="cb8-82"><a href="#cb8-82" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb8-83"><a href="#cb8-83" tabindex="-1"></a>  </span>
+<span id="cb8-84"><a href="#cb8-84" tabindex="-1"></a>  <span class="co"># Dashed lines for 68% high credibility band of history</span></span>
+<span id="cb8-85"><a href="#cb8-85" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> LB_s, <span class="at">color =</span> <span class="st">&quot;hist&quot;</span>), </span>
+<span id="cb8-86"><a href="#cb8-86" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb8-87"><a href="#cb8-87" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> UB_s, <span class="at">color =</span> <span class="st">&quot;hist&quot;</span>), </span>
+<span id="cb8-88"><a href="#cb8-88" tabindex="-1"></a>            <span class="at">linetype =</span> <span class="st">&quot;dashed&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb8-89"><a href="#cb8-89" tabindex="-1"></a>  </span>
+<span id="cb8-90"><a href="#cb8-90" tabindex="-1"></a>  <span class="co"># Labels and theme</span></span>
+<span id="cb8-91"><a href="#cb8-91" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Unconditional Forecast&quot;</span>, <span class="at">x =</span> <span class="st">&quot;h&quot;</span>, <span class="at">y =</span> varbls[<span class="dv">1</span>]) <span class="sc">+</span></span>
+<span id="cb8-92"><a href="#cb8-92" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-93"><a href="#cb8-93" tabindex="-1"></a>  </span>
+<span id="cb8-94"><a href="#cb8-94" tabindex="-1"></a>  <span class="co"># Custom legend for colors</span></span>
+<span id="cb8-95"><a href="#cb8-95" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb8-96"><a href="#cb8-96" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">&quot;Legend&quot;</span>,</span>
+<span id="cb8-97"><a href="#cb8-97" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">&#39;med&#39;</span><span class="ot">=</span><span class="st">&quot;Median&quot;</span>,<span class="st">&#39;hist&#39;</span><span class="ot">=</span><span class="st">&quot;no shock unc.&quot;</span>),</span>
+<span id="cb8-98"><a href="#cb8-98" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;med&quot;</span> <span class="ot">=</span> <span class="st">&quot;blue&quot;</span>,  <span class="st">&#39;hist&#39;</span><span class="ot">=</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb8-99"><a href="#cb8-99" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-100"><a href="#cb8-100" tabindex="-1"></a>  </span>
+<span id="cb8-101"><a href="#cb8-101" tabindex="-1"></a>  <span class="co"># # Custom legend for fill</span></span>
+<span id="cb8-102"><a href="#cb8-102" tabindex="-1"></a>  <span class="co"># scale_fill_manual(</span></span>
+<span id="cb8-103"><a href="#cb8-103" tabindex="-1"></a>  <span class="co">#   name = &quot;Legend&quot;,</span></span>
+<span id="cb8-104"><a href="#cb8-104" tabindex="-1"></a>  <span class="co">#   labels=c(&#39;bnd&#39;=&quot;no shock unc.&quot;),</span></span>
+<span id="cb8-105"><a href="#cb8-105" tabindex="-1"></a>  <span class="co">#   values = c(&#39;bnd&#39; = &quot;lightblue&quot;)</span></span>
+<span id="cb8-106"><a href="#cb8-106" tabindex="-1"></a>  <span class="co"># )+</span></span>
+<span id="cb8-107"><a href="#cb8-107" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;bottom&#39;</span>)<span class="sc">+</span></span>
+<span id="cb8-108"><a href="#cb8-108" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb8-109"><a href="#cb8-109" tabindex="-1"></a></span>
+<span id="cb8-110"><a href="#cb8-110" tabindex="-1"></a></span>
+<span id="cb8-111"><a href="#cb8-111" tabindex="-1"></a>} <span class="co"># end run all block</span></span>
+<span id="cb8-112"><a href="#cb8-112" tabindex="-1"></a>p</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># To save the unconditional forecast plot:</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co"># ggsave(&#39;uncond_forc.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co">#NB: Y contans the data n_var x T</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>h<span class="ot">=</span><span class="dv">4</span> <span class="co"># horizon</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>n_sim<span class="ot">=</span><span class="dv">200</span> <span class="co"># number of shock draws</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>obs<span class="ot">=</span><span class="fu">c</span>(<span class="dv">2</span>) <span class="co">#position of observables</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>pos_cond_vars<span class="ot">=</span>obs </span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co"># given the path of the observables</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>TT<span class="ot">=</span><span class="fu">nrow</span>(X0)</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>path<span class="ot">=</span>X0[(TT<span class="sc">-</span>h<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>TT,obs]</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co"># used for bult in conditional forecast</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>bvarSign_path<span class="ot">=</span>X0[(TT<span class="sc">-</span>h<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>TT,]</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>bvarSign_path[,<span class="sc">-</span>obs]<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co"># give the shocks that are not driving the scenario: NA if all driving</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>shocks<span class="ot">=</span>NA<span class="co">#c(1,2,3)</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>tmp<span class="ot">&lt;-</span><span class="fu">scenarios</span>(<span class="at">h =</span> h,</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>               <span class="at">path =</span> path,<span class="at">obs =</span> obs,</span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>               <span class="at">free_shocks =</span> shocks,</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>               <span class="at">n_sample =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>               <span class="at">data_ =</span> Z,<span class="at">g=</span><span class="cn">NULL</span>,<span class="at">Sigma_g=</span><span class="cn">NULL</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>               <span class="at">posterior=</span>posterior,<span class="at">matrices=</span>matrices)</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>mu_eps<span class="ot">&lt;-</span>tmp[[<span class="dv">1</span>]]</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>Sigma_eps<span class="ot">&lt;-</span>tmp[[<span class="dv">2</span>]]</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>mu_y<span class="ot">&lt;-</span>tmp[[<span class="dv">3</span>]]</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>Sigma_y<span class="ot">&lt;-</span>tmp[[<span class="dv">4</span>]]</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>big_b<span class="ot">&lt;-</span>tmp[[<span class="dv">5</span>]]</span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a>big_M<span class="ot">&lt;-</span>tmp[[<span class="dv">6</span>]]</span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>y_h<span class="ot">&lt;-</span><span class="fu">simulate_conditional_forecasts</span>(<span class="at">mu_y=</span>mu_y, <span class="at">Sigma_y=</span>Sigma_y, <span class="at">varnames =</span> varbls, <span class="at">n_sim =</span> n_sim)</span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a>  </span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a></span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a><span class="co"># convert to data frames of central and HPD</span></span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>y_h_m<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.5</span>))</span>
+<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a>y_h_l<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.16</span>))</span>
+<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a>y_h_u<span class="ot">&lt;-</span><span class="fu">apply</span>(y_h,<span class="fu">c</span>(<span class="dv">1</span>),<span class="at">FUN=</span><span class="cf">function</span>(x)<span class="fu">quantile</span>(x,<span class="fl">0.84</span>))</span>
+<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">center=</span>y_h_m,<span class="at">variable=</span><span class="fu">rep</span>(varbls,h),<span class="at">hor=</span><span class="fu">sort</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span>h,n_var)))</span>
+<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a>cond.for<span class="sc">$</span>lower<span class="ot">&lt;-</span>y_h_l</span>
+<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a>cond.for<span class="sc">$</span>upper<span class="ot">&lt;-</span>y_h_u</span>
+<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span>cond.for[,<span class="fu">c</span>(<span class="st">&quot;hor&quot;</span>,<span class="st">&quot;variable&quot;</span>,<span class="st">&quot;lower&quot;</span>,<span class="st">&quot;center&quot;</span>,<span class="st">&quot;upper&quot;</span>)]</span>
+<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" tabindex="-1"></a></span>
+<span id="cb10-43"><a href="#cb10-43" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" tabindex="-1"></a><span class="co"># inspect result</span></span>
+<span id="cb10-45"><a href="#cb10-45" tabindex="-1"></a>dt_t<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">t</span>(Y))</span>
+<span id="cb10-46"><a href="#cb10-46" tabindex="-1"></a>dt_t<span class="sc">$</span>h<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(dt_t)</span>
+<span id="cb10-47"><a href="#cb10-47" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">pivot_longer</span>(dt_t,<span class="at">cols =</span><span class="fu">all_of</span>(<span class="dv">1</span><span class="sc">:</span>n_var),<span class="at">values_to =</span><span class="fu">names</span>(cond.for)[<span class="dv">4</span>],<span class="at">names_to =</span> <span class="st">&quot;variable&quot;</span> )</span>
+<span id="cb10-48"><a href="#cb10-48" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[y_data<span class="sc">$</span>h<span class="sc">&gt;=</span><span class="fu">last</span>(y_data<span class="sc">$</span>h)<span class="sc">-</span><span class="dv">4</span>,]  </span>
+<span id="cb10-49"><a href="#cb10-49" tabindex="-1"></a>  </span>
+<span id="cb10-50"><a href="#cb10-50" tabindex="-1"></a>y_data<span class="sc">$</span>hor<span class="ot">&lt;-</span>y_data<span class="sc">$</span>h<span class="sc">-</span><span class="fu">max</span>(y_data<span class="sc">$</span>h)</span>
+<span id="cb10-51"><a href="#cb10-51" tabindex="-1"></a>y_data<span class="sc">$</span>lower<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb10-52"><a href="#cb10-52" tabindex="-1"></a>y_data<span class="sc">$</span>upper<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb10-53"><a href="#cb10-53" tabindex="-1"></a>y_data<span class="ot">&lt;-</span>y_data[,<span class="fu">names</span>(cond.for)]</span>
+<span id="cb10-54"><a href="#cb10-54" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span><span class="fu">rbind</span>(y_data,cond.for)</span>
+<span id="cb10-55"><a href="#cb10-55" tabindex="-1"></a>cond.for<span class="ot">&lt;-</span>cond.for[<span class="fu">order</span>(cond.for<span class="sc">$</span>hor),]</span>
+<span id="cb10-56"><a href="#cb10-56" tabindex="-1"></a></span>
+<span id="cb10-57"><a href="#cb10-57" tabindex="-1"></a>cond.for<span class="sc">$</span>hist<span class="ot">&lt;-</span><span class="dv">1</span></span>
+<span id="cb10-58"><a href="#cb10-58" tabindex="-1"></a>cond.for[cond.for<span class="sc">$</span>hor<span class="sc">&lt;=</span><span class="dv">0</span>,<span class="st">&#39;hist&#39;</span>]<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb10-59"><a href="#cb10-59" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb10-60"><a href="#cb10-60" tabindex="-1"></a></span>
+<span id="cb10-61"><a href="#cb10-61" tabindex="-1"></a>T.start<span class="ot">=</span><span class="st">&#39;2016-01-01&#39;</span></span>
+<span id="cb10-62"><a href="#cb10-62" tabindex="-1"></a>T.end<span class="ot">=</span><span class="fu">as.Date</span>(T.start)<span class="sc">%m+%</span><span class="fu">months</span>(<span class="dv">9</span>)</span>
+<span id="cb10-63"><a href="#cb10-63" tabindex="-1"></a>y_data<span class="ot">&lt;-</span><span class="fu">t</span>(Y) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>()</span>
+<span id="cb10-64"><a href="#cb10-64" tabindex="-1"></a>dt_tmp<span class="ot">&lt;-</span>zoo<span class="sc">::</span><span class="fu">as.yearqtr</span>(NKdata<span class="sc">$</span>year, <span class="at">format =</span> <span class="st">&quot;%Y Q%q&quot;</span>)</span>
+<span id="cb10-65"><a href="#cb10-65" tabindex="-1"></a>dates_date<span class="ot">&lt;-</span>zoo<span class="sc">::</span><span class="fu">as.Date</span>(dt_tmp)</span>
+<span id="cb10-66"><a href="#cb10-66" tabindex="-1"></a>y_data<span class="sc">$</span>hor<span class="ot">&lt;-</span>dates_date[(<span class="dv">2</span><span class="sc">*</span>specification<span class="sc">$</span>p<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span><span class="fu">length</span>(dates_date)]</span>
+<span id="cb10-67"><a href="#cb10-67" tabindex="-1"></a></span>
+<span id="cb10-68"><a href="#cb10-68" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">plot_cond_forc</span>(<span class="at">y_h_cond =</span>y_h, varbls[<span class="dv">1</span>],<span class="at">T.start =</span> T.start,<span class="at">T.end =</span> T.end,<span class="at">y_data =</span>y_data )</span>
+<span id="cb10-69"><a href="#cb10-69" tabindex="-1"></a>p[[<span class="dv">1</span>]]</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># To save the conditional forecast plot:</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co"># ggsave(&#39;cond_forc.png&#39;, plot=p[[1]], device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>threshold<span class="ot">=</span><span class="fu">last</span>(y_data[,<span class="dv">1</span>])<span class="sc">*</span>(<span class="fl">1.01</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>p<span class="ot">&lt;-</span><span class="fu">plot_cond_histo</span>(<span class="at">variable=</span>varbls[<span class="dv">1</span>],<span class="at">horizon=</span><span class="dv">1</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>                   <span class="at">threshold =</span> threshold,<span class="at">data =</span>y_h,<span class="at">above=</span>F,<span class="at">size=</span><span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title=</span><span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">theme_minimal</span>()<span class="sc">+</span><span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>)<span class="sc">+</span><span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>p</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># To save the conditional histogram plot:</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="co"># ggsave(&#39;cond_histo.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>q<span class="ot">&lt;-</span><span class="fu">KL</span>(Sigma_eps,mu_eps,h,<span class="at">plot_ =</span> T)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">hist</span>(q[[<span class="dv">1</span>]],<span class="at">main=</span><span class="st">&#39;KL measure (ref value 0.5)&#39;</span>)</span></code></pre></div>
 </div>
 </div>
 
