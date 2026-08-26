@@ -7,10 +7,6 @@ knitr::opts_chunk$set(
   cache = FALSE
 )
 
-## ----Set-directory,echo=FALSE,include=FALSE-----------------------------------
-# Following is because of the German way of typing dates etc.
-Sys.setlocale("LC_TIME", "English.UTF-8") # Windows
-
 ## ----Load-necessary-packages,eval=TRUE----------------------------------------
 # Load required packages
 library(APRScenario)
@@ -84,8 +80,7 @@ irf            = bsvars::compute_impulse_responses(posterior, horizon = 40)
   p<-plot_bvars(irf, significance_level = 0.32,
                 central_tendency = 'median', variable_names = varbls, shock_names = varbls)
 
-  {dev.new()
-  grid::grid.newpage()  
+  {
   grid_arranged_plots <- arrangeGrob(grobs = p[1:9], nrow =3, ncol =3)
   grid.arrange(grobs = p[1:9], nrow =3, ncol =3)
 
@@ -104,12 +99,6 @@ names(sr1)<-varbls
 # sr1 %>% cat(file='figures/sr_bvars.tex')
 
 
-f_bvar<-bsvars::forecast(
-  posterior,
-  horizon = 3,
-  exogenous_forecast = NULL,
-  conditional_forecast = NULL
-)
 # VAR structure Y'=X'*B+u' (see specification$data_matrices) 
 
 

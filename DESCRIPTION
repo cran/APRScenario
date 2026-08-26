@@ -1,7 +1,7 @@
 Package: APRScenario
 Title: Structural Scenario Analysis for Bayesian Structural Vector
         Autoregression Models
-Version: 0.0.4.0
+Version: 0.0.4.2
 Author: Giovanni Lombardo [aut, cre],
   Tito Quadri [aut]
 Maintainer: Giovanni Lombardo <giannilmbd@gmail.com>
@@ -26,6 +26,6 @@ RoxygenNote: 7.3.2
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2026-07-15 09:36:41 UTC; gianni
+Packaged: 2026-08-26 06:59:39 UTC; gianni
 Repository: CRAN
-Date/Publication: 2026-07-15 12:40:08 UTC
+Date/Publication: 2026-08-26 08:50:17 UTC
