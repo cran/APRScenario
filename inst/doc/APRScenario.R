@@ -351,3 +351,28 @@ q<-KL(Sigma_eps,mu_eps,h,plot_ = T)
 hist(q[[1]],main='KL measure (ref value 0.5)')
 
 
+## ----Waggoner-Zha-posterior, fig.show='hide'----------------------------------
+set.seed(1)
+wz <- wz_posterior(tmp, method = "apr", h = h, n_iter = 2000, burn = 200)
+c(ESS = wz$ess, N = length(wz$weights), KL_param = wz$kl_param, KL_joint = wz$kl_joint)
+
+# noisy observation of the path; Omega is a quarter of the average
+# unconditional forecast variance of the conditioned variable
+pos <- obs + n_var * (0:(h - 1))
+v_unc <- rowMeans(apply(big_M, 3, function(M) diag(crossprod(M))[pos]))
+wz_noisy <- wz_posterior(tmp, method = "noisy", h = h, obs = obs, path = path,
+                         Omega = diag(0.25 * v_unc, h))
+c(ESS = wz_noisy$ess, KL_param = wz_noisy$kl_param, KL_joint = wz_noisy$kl_joint)
+
+# conditional forecasts under the updated posterior
+y_h_wz <- simulate_conditional_forecasts(mu_y = wz$mu_y_resampled,
+                                         Sigma_y = wz$Sigma_y_resampled,
+                                         varnames = varbls, n_sim = n_sim)
+cmp <- data.frame(
+  state = rownames(y_h),
+  median_given_theta = apply(y_h, 1, median),
+  median_updated = apply(y_h_wz, 1, median),
+  iqr_given_theta = apply(y_h, 1, IQR),
+  iqr_updated = apply(y_h_wz, 1, IQR))
+knitr::kable(cmp, digits = 3, row.names = FALSE)
+

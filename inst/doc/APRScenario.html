@@ -48,8 +48,9 @@ overflow: visible;
 }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -904,6 +905,194 @@ the scenarios.</p>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co"># ggsave(&#39;cond_histo.png&#39;, plot=p, device=&#39;png&#39;, path=tempdir(), width=18, height=16, units = &#39;cm&#39;)</span></span></code></pre></div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>q<span class="ot">&lt;-</span><span class="fu">KL</span>(Sigma_eps,mu_eps,h,<span class="at">plot_ =</span> T)</span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">hist</span>(q[[<span class="dv">1</span>]],<span class="at">main=</span><span class="st">&#39;KL measure (ref value 0.5)&#39;</span>)</span></code></pre></div>
+</div>
+<div id="conditions-as-information-about-the-parameters" class="section level2">
+<h2>Conditions as information about the parameters</h2>
+<p>The distributions above are derived for given parameters <span class="math inline">\(\theta=(A,B)\)</span> and then averaged over the
+posterior <span class="math inline">\(p(\theta\mid Y)\)</span>. Waggoner
+and Zha (1999) and APR (Algorithm 1) define the conditional forecast
+through the joint posterior <span class="math inline">\(p(\tilde
+y_{T+1,T+h},\theta\mid Y,SR)\)</span>, in which the restrictions <span class="math inline">\(SR\)</span> also update <span class="math inline">\(\theta\)</span>. APR draw from it with a Gibbs
+sampler that alternates</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\theta\sim p(\theta\mid Y,\tilde
+y_{T+1,T+h})\)</span>, the posterior on the sample extended by the
+future path;</li>
+<li><span class="math inline">\(\tilde y_{T+1,T+h}\sim\mathcal
+N(\mu_y,\Sigma_y)\)</span> given <span class="math inline">\(\theta\)</span>, the scenario distribution derived
+above.</li>
+</ol>
+<p>By Bayes’ rule</p>
+<p><span class="math display">\[
+p(\theta\mid Y,\tilde y_{T+1,T+h})\propto p(\theta\mid Y)\,\mathcal
+N\left(\tilde y_{T+1,T+h};\,b_{T+1,T+h},\,M^{\prime}M\right),
+\]</span></p>
+<p>so step 1 is carried out by resampling the existing posterior draws
+<span class="math inline">\(\theta_j\)</span> with weights proportional
+to the unconditional forecast density of the current path.
+<code>wz_posterior(method = &quot;apr&quot;)</code> runs this sampler on the
+output of <code>scenarios()</code> and returns the marginal posterior
+weight <span class="math inline">\(\tilde w_j\)</span> of each draw. It
+applies to all the restrictions handled by <code>scenarios()</code>,
+including density conditions and restrictions on shocks.</p>
+<p>For conditions on observables the weights have closed forms. Under
+the hard condition <span class="math inline">\(C\tilde
+y_{T+1,T+h}=f_{T+1,T+h}\)</span>,</p>
+<p><span class="math display">\[
+\tilde w_j\propto\mathcal
+N\left(f_{T+1,T+h};\,Cb_{T+1,T+h}^{(j)},\,D_jD_j^{\prime}\right),
+\]</span></p>
+<p>and when the path is a noisy observation <span class="math inline">\(f_{T+1,T+h}=C\tilde y_{T+1,T+h}+\eta\)</span>,
+<span class="math inline">\(\eta\sim\mathcal N(0,\Omega)\)</span>,</p>
+<p><span class="math display">\[
+\tilde w_j\propto\mathcal
+N\left(f_{T+1,T+h};\,Cb_{T+1,T+h}^{(j)},\,D_jD_j^{\prime}+\Omega\right)
+\]</span></p>
+<p>(<code>method = &quot;hard&quot;</code> and <code>method = &quot;noisy&quot;</code>).</p>
+<p>Three diagnostics are reported. The effective sample size <span class="math inline">\(1/\sum_j\tilde w_j^2\)</span> measures how many
+draws carry the reweighted posterior. The divergence of the updated
+parameter posterior from <span class="math inline">\(p(\theta\mid
+Y)\)</span> is <span class="math inline">\(\sum_j\tilde w_j\log(N\tilde
+w_j)\)</span>. By the chain rule the divergence of the joint
+distribution of parameters and shocks from its unconditional counterpart
+is</p>
+<p><span class="math display">\[
+D_{KL}^{joint}=\sum_j\tilde w_j\log(N\tilde w_j)+\sum_j\tilde
+w_j\,D_{KL}^{(j)},
+\]</span></p>
+<p>where <span class="math inline">\(D_{KL}^{(j)}\)</span> is the
+per-draw divergence of the scenario from the unconditional forecast
+computed above. It is infinite under hard conditions, whose conditional
+distribution is degenerate.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>wz <span class="ot">&lt;-</span> <span class="fu">wz_posterior</span>(tmp, <span class="at">method =</span> <span class="st">&quot;apr&quot;</span>, <span class="at">h =</span> h, <span class="at">n_iter =</span> <span class="dv">2000</span>, <span class="at">burn =</span> <span class="dv">200</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="fu">c</span>(<span class="at">ESS =</span> wz<span class="sc">$</span>ess, <span class="at">N =</span> <span class="fu">length</span>(wz<span class="sc">$</span>weights), <span class="at">KL_param =</span> wz<span class="sc">$</span>kl_param, <span class="at">KL_joint =</span> wz<span class="sc">$</span>kl_joint)</span></code></pre></div>
+<pre><code>##          ESS            N     KL_param     KL_joint 
+## 1.993299e+02 2.000000e+02 1.683416e-03 3.678610e-01</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># noisy observation of the path; Omega is a quarter of the average</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="co"># unconditional forecast variance of the conditioned variable</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>pos <span class="ot">&lt;-</span> obs <span class="sc">+</span> n_var <span class="sc">*</span> (<span class="dv">0</span><span class="sc">:</span>(h <span class="sc">-</span> <span class="dv">1</span>))</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>v_unc <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(<span class="fu">apply</span>(big_M, <span class="dv">3</span>, <span class="cf">function</span>(M) <span class="fu">diag</span>(<span class="fu">crossprod</span>(M))[pos]))</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>wz_noisy <span class="ot">&lt;-</span> <span class="fu">wz_posterior</span>(tmp, <span class="at">method =</span> <span class="st">&quot;noisy&quot;</span>, <span class="at">h =</span> h, <span class="at">obs =</span> obs, <span class="at">path =</span> path,</span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>                         <span class="at">Omega =</span> <span class="fu">diag</span>(<span class="fl">0.25</span> <span class="sc">*</span> v_unc, h))</span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a><span class="fu">c</span>(<span class="at">ESS =</span> wz_noisy<span class="sc">$</span>ess, <span class="at">KL_param =</span> wz_noisy<span class="sc">$</span>kl_param, <span class="at">KL_joint =</span> wz_noisy<span class="sc">$</span>kl_joint)</span></code></pre></div>
+<pre><code>##          ESS     KL_param     KL_joint 
+## 196.93002708   0.00783123   1.45432321</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># conditional forecasts under the updated posterior</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>y_h_wz <span class="ot">&lt;-</span> <span class="fu">simulate_conditional_forecasts</span>(<span class="at">mu_y =</span> wz<span class="sc">$</span>mu_y_resampled,</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>                                         <span class="at">Sigma_y =</span> wz<span class="sc">$</span>Sigma_y_resampled,</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>                                         <span class="at">varnames =</span> varbls, <span class="at">n_sim =</span> n_sim)</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>cmp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a>  <span class="at">state =</span> <span class="fu">rownames</span>(y_h),</span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a>  <span class="at">median_given_theta =</span> <span class="fu">apply</span>(y_h, <span class="dv">1</span>, median),</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a>  <span class="at">median_updated =</span> <span class="fu">apply</span>(y_h_wz, <span class="dv">1</span>, median),</span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a>  <span class="at">iqr_given_theta =</span> <span class="fu">apply</span>(y_h, <span class="dv">1</span>, IQR),</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a>  <span class="at">iqr_updated =</span> <span class="fu">apply</span>(y_h_wz, <span class="dv">1</span>, IQR))</span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cmp, <span class="at">digits =</span> <span class="dv">3</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="25%" />
+<col width="19%" />
+<col width="21%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">state</th>
+<th align="right">median_given_theta</th>
+<th align="right">median_updated</th>
+<th align="right">iqr_given_theta</th>
+<th align="right">iqr_updated</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">GDP.E.1</td>
+<td align="right">2.295</td>
+<td align="right">2.324</td>
+<td align="right">4.456</td>
+<td align="right">4.408</td>
+</tr>
+<tr class="even">
+<td align="left">pi.PCE.core.1</td>
+<td align="right">1.103</td>
+<td align="right">1.111</td>
+<td align="right">1.150</td>
+<td align="right">1.142</td>
+</tr>
+<tr class="odd">
+<td align="left">i.1</td>
+<td align="right">0.284</td>
+<td align="right">0.277</td>
+<td align="right">1.100</td>
+<td align="right">1.097</td>
+</tr>
+<tr class="even">
+<td align="left">GDP.E.2</td>
+<td align="right">2.138</td>
+<td align="right">2.204</td>
+<td align="right">4.715</td>
+<td align="right">4.734</td>
+</tr>
+<tr class="odd">
+<td align="left">pi.PCE.core.2</td>
+<td align="right">1.748</td>
+<td align="right">1.753</td>
+<td align="right">1.390</td>
+<td align="right">1.393</td>
+</tr>
+<tr class="even">
+<td align="left">i.2</td>
+<td align="right">0.541</td>
+<td align="right">0.535</td>
+<td align="right">1.682</td>
+<td align="right">1.685</td>
+</tr>
+<tr class="odd">
+<td align="left">GDP.E.3</td>
+<td align="right">2.078</td>
+<td align="right">2.120</td>
+<td align="right">4.859</td>
+<td align="right">4.866</td>
+</tr>
+<tr class="even">
+<td align="left">pi.PCE.core.3</td>
+<td align="right">1.400</td>
+<td align="right">1.415</td>
+<td align="right">1.599</td>
+<td align="right">1.598</td>
+</tr>
+<tr class="odd">
+<td align="left">i.3</td>
+<td align="right">0.688</td>
+<td align="right">0.700</td>
+<td align="right">2.115</td>
+<td align="right">2.104</td>
+</tr>
+<tr class="even">
+<td align="left">GDP.E.4</td>
+<td align="right">2.019</td>
+<td align="right">2.029</td>
+<td align="right">4.932</td>
+<td align="right">4.914</td>
+</tr>
+<tr class="odd">
+<td align="left">pi.PCE.core.4</td>
+<td align="right">1.181</td>
+<td align="right">1.199</td>
+<td align="right">1.740</td>
+<td align="right">1.761</td>
+</tr>
+<tr class="even">
+<td align="left">i.4</td>
+<td align="right">0.795</td>
+<td align="right">0.829</td>
+<td align="right">2.471</td>
+<td align="right">2.464</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
